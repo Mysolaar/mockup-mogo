@@ -56,6 +56,10 @@
   grid-column-start: 2;
   grid-column-end: 3;
   transition: $transition;
+  &__icon{
+    width: 10px;
+    font-size: 10px;
+  }
 }
 
 // TABLET
