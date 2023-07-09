@@ -1,0 +1,16 @@
+@mixin margin-pading-null {
+    margin: 0 auto;
+    padding: 0;
+}
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin UpperCase {
+    text-transform: uppercase;
+}

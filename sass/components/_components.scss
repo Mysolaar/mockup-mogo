@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+  color: getColor("FontColorFirst");
+  padding: 10px 0;
+  margin: 0 10px;
+  transition: $transition;
+}
+
+.link {
+  &:hover,
+  :active {
+    border-bottom: 3px solid getColor("HoverColor");
+    color: getColor("HoverColor");
+    transition: $transition;
+  }
+}
+
+.separator {
+  width: 126px;
+  height: 3px;
+  background-color: getColor("SeparatorColor");
+  margin: 40px 0;
+  justify-self: center;
+  margin: auto;
+}
+
+.link--active {
+  border-bottom: 3px solid getColor("HoverColor");
+  color: getColor("HoverColor");
+  transition: $transition;
+}
+
+button {
+  cursor: pointer;
+}
+
+.fa {
+  width: 40px;
+}

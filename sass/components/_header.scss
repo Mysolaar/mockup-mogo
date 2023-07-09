@@ -1,0 +1,82 @@
+.header {
+  background-color: getColor("Transparent");
+  height: 60px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  z-index: 1;
+
+  &__container {
+    width: auto;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr;
+    padding: 20px 0;
+    display: grid;
+    align-items: baseline;
+  }
+  &__link-logo {
+    font-size: 26px;
+    font-weight: 800;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100px;
+  }
+  &__icon {
+    height: 20px;
+    transition: $transition;
+  }
+  &__button {
+    background-color: getColor("Transparent");
+    border: none;
+    color: getColor("FontColorFirst");
+    grid-column-start: 3;
+    grid-column-end: 4;
+    align-self: center;
+    padding: 5px;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: $transition;
+    &:hover,
+    :focus,
+    :active {
+      transition: $transition;
+      color: getColor("HoverColor");
+    }
+    &__button,
+    i {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+.navigation {
+  display: none;
+  @include UpperCase;
+  font-size: 12px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  transition: $transition;
+}
+
+// TABLET
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: block;
+  }
+  .header {
+    &__button {
+      display: none;
+    }
+  }
+}
+
+// DESCTOP
+
+// @media screen and (min-width: 1200px) {
+//   .header {
+//     &__button {
+//       display: none;
+//     }
+//   }
+// }

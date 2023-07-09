@@ -1,0 +1,10 @@
+$font: (
+  "first": "Kaushan Script",
+  "secondary": "Montserrat",
+  "third": "Roboto Condensed",
+  "FontType": sans-serif,
+);
+
+@function getFont($key) {
+  @return map-get($font, $key);
+}

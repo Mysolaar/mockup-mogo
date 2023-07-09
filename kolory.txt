@@ -1,0 +1,39 @@
+kolory:
+
+gradient:
+#f48b82
+#fce38a
+
+hover w nav:
+#facd88
+
+kreska pomiędzy rozdziałami
+#f38181
+
+h2:
+#333333
+
+seo:
+#333333
+
+lorem:
+#cccccc
+
+imiona:
+#333333
+
+stanowiska:
+#c6c6c6
+
+socials:
+#f38181 - czerwień
+#fbe389 - pomarańcz
+
+hover obrazków spód + button subscribe:
+#95e1d3
+
+linia footer:
+#5e5e5e
+
+inputplaceholder
+#dcdcdc

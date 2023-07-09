@@ -1,0 +1,32 @@
+$colors: (
+  "BackgroundMain": #fff,
+  "FontColorFirst": #fff,
+  "FontColorSecond": #000,
+  "PlainTextColor": #cccccc,
+  "AccentColor": #95e1d3,
+
+  "HoverColor": #facd88,
+
+  "SeparatorColor": #f38181,
+  "gradientColFirst": #fce38abf,
+  "gradientColSecond": #f48b82bf,
+
+  "MidColor": #c6c6c6,
+  "Transparent": #ffffff00,
+  "LineColor": #e5e5e5,
+
+
+
+  
+  "ColorLightGray": #f5a1a1,
+  
+  "PfolioItemBorder": #eeeeee,
+  "WeDoBoxTranspColor": #2f303acc,
+  "ModalBGColor": #00000033,
+  "ColorFormCommBorder": #21212133,
+  "ColorFormPlaceholder": #75757580,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
