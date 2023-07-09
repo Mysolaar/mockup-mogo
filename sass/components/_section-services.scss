@@ -13,6 +13,7 @@
     padding: 0;
     padding-top: 60px;
     gap: 50px 80px;
+    padding-left: 10px;
   }
   &__item {
     display: grid;
@@ -54,6 +55,7 @@
   .services {
     &__items {
       grid-template-columns: repeat(2, 1fr);
+      padding-left: 0;
     }
   }
 }
