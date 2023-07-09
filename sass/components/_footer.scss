@@ -63,8 +63,9 @@
 @media screen and (min-width: 768px) {
   .footer {
     &__container {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      justify-content: space-between;
     }
     &__rights {
       grid-column: 1/ 2;
@@ -72,10 +73,13 @@
       justify-self: start;
     }
     &__form {
-      grid-column: 2/ 4;
+      grid-column: -2/ -1;
       grid-row: 1 / 2;
+      grid-template-columns: repeat(2, 1fr);
       justify-self: end;
-      display: block;
+    }
+    &__button {
+      max-width: 150px;
     }
   }
 }

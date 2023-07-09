@@ -244,8 +244,9 @@ button {
 
 @media screen and (min-width: 768px) {
   .footer__container {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    justify-content: space-between;
   }
   .footer__rights {
     grid-column: 1/2;
@@ -253,10 +254,13 @@ button {
     justify-self: start;
   }
   .footer__form {
-    grid-column: 2/4;
+    grid-column: -2/-1;
     grid-row: 1/2;
+    grid-template-columns: repeat(2, 1fr);
     justify-self: end;
-    display: block;
+  }
+  .footer__button {
+    max-width: 150px;
   }
 }
 .slider {
