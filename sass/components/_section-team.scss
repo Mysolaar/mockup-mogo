@@ -6,11 +6,11 @@
   &__list {
     padding: 0;
     margin-bottom: 30px;
-  }
-  &__list {
     padding-top: 60px;
     margin: 0;
+    
   }
+
   &__item {
     width: 250px;
     height: auto;
@@ -22,6 +22,7 @@
     width: 250px;
     height: auto;
     margin: 0 auto;
+    margin-top: 30px;
   }
   &__name {
     margin: 0;
@@ -50,7 +51,7 @@
 // overlay
 .team__photo {
   position: relative;
-  display: inline-block;
+  // display: inline-block;
 }
 
 .team__img {
@@ -82,13 +83,13 @@
 }
 
 .team__social {
+  display: grid;
+  justify-content: center;
+  align-self: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-self: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -102,43 +103,10 @@
   opacity: 1;
 }
 
-.team__social li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.team__icon {
-  color: white;
-  font-size: 20px;
-}
-
-.team__icon {
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-color: getColor("SocialSecond");
-  color: getColor("SocialFirst");
-  margin: 0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  row-gap: 0;
-  &:hover,
-  :active {
-    background-color: getColor("SocialFirst");
-    color: getColor("SocialSecond");
-  }
-}
-
-.fa-facebook {
-  background-color: getColor("SocialFirst");
-  color: getColor("SocialSecond");
-  &:hover,
-  :active {
-    background-color: getColor("SocialSecond");
-    color: getColor("SocialFirst");
-  }
-}
+// .team__social li {
+//   display: inline-block;
+//   margin-right: 10px;
+// }
 
 .team__social {
   display: grid;
@@ -165,6 +133,35 @@
   transition: $transition;
 }
 
+.team__icon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  background-color: getColor("SocialSecond");
+  color: getColor("SocialFirst");
+  margin: 0;
+  row-gap: 0;
+  &:hover,
+  :active {
+    background-color: getColor("SocialFirst");
+    color: getColor("SocialSecond");
+  }
+}
+
+.fa-facebook {
+  background-color: getColor("SocialFirst");
+  color: getColor("SocialSecond");
+  &:hover,
+  :active {
+    background-color: getColor("SocialSecond");
+    color: getColor("SocialFirst");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team {
     &__item,
@@ -185,6 +182,7 @@
     &__img,
     &__photo {
       width: 290px;
+      margin-top: 0;
     }
   }
 }

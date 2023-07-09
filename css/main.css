@@ -139,7 +139,6 @@ button {
   width: 100px;
 }
 .header__icon {
-  height: 20px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__button {
@@ -164,6 +163,7 @@ button {
 .header__button i {
   height: 60px;
   width: 60px;
+  font-size: 30px;
 }
 
 .navigation {
@@ -347,6 +347,7 @@ button {
 .services__icon {
   height: auto;
   width: 40px;
+  font-size: 30px;
   color: #95e1d3;
   grid-column: 1/2;
   grid-row: 1/2;
@@ -383,8 +384,6 @@ button {
 .team__list {
   padding: 0;
   margin-bottom: 30px;
-}
-.team__list {
   padding-top: 60px;
   margin: 0;
 }
@@ -399,6 +398,7 @@ button {
   width: 250px;
   height: auto;
   margin: 0 auto;
+  margin-top: 30px;
 }
 .team__name {
   margin: 0;
@@ -423,7 +423,6 @@ button {
 
 .team__photo {
   position: relative;
-  display: inline-block;
 }
 
 .team__img {
@@ -451,13 +450,13 @@ button {
 }
 
 .team__social {
+  display: grid;
+  justify-content: center;
+  align-self: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-self: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -469,44 +468,6 @@ button {
 
 .team__photo:hover .team__social {
   opacity: 1;
-}
-
-.team__social li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.team__icon {
-  color: white;
-  font-size: 20px;
-}
-
-.team__icon {
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  background-color: #fce38a;
-  color: #f38181;
-  margin: 0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  row-gap: 0;
-}
-.team__icon:hover,
-.team__icon :active {
-  background-color: #f38181;
-  color: #fce38a;
-}
-
-.fa-facebook {
-  background-color: #f38181;
-  color: #fce38a;
-}
-.fa-facebook:hover,
-.fa-facebook :active {
-  background-color: #fce38a;
-  color: #f38181;
 }
 
 .team__social {
@@ -530,6 +491,35 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.team__icon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  background-color: #fce38a;
+  color: #f38181;
+  margin: 0;
+  row-gap: 0;
+}
+.team__icon:hover,
+.team__icon :active {
+  background-color: #f38181;
+  color: #fce38a;
+}
+
+.fa-facebook {
+  background-color: #f38181;
+  color: #fce38a;
+}
+.fa-facebook:hover,
+.fa-facebook :active {
+  background-color: #fce38a;
+  color: #f38181;
+}
+
 @media screen and (min-width: 768px) {
   .team__item, .team__img, .team__photo {
     width: 380px;
@@ -542,5 +532,6 @@ button {
   }
   .team__item, .team__img, .team__photo {
     width: 290px;
+    margin-top: 0;
   }
 }/*# sourceMappingURL=main.css.map */
