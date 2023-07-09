@@ -1,9 +1,11 @@
 .team {
   &__container {
     display: grid;
+    margin-bottom: 30px;
   }
   &__list {
     padding: 0;
+    margin-bottom: 30px;
   }
   &__list {
     padding-top: 60px;
@@ -23,7 +25,7 @@
   }
   &__name {
     margin: 0;
-    margin-top: 25px;
+    padding-top: 25px;
     font-weight: 500;
   }
   &__description {
@@ -34,6 +36,7 @@
     margin: 0;
     margin-top: 15px;
     font-style: italic;
+    padding-bottom: 20px;
   }
   &__img {
     width: 250px;
@@ -56,19 +59,25 @@
   height: auto;
 }
 
-.team__img:hover::after {
+.team__photo:hover::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to top,
+    getColor("gradientColFirst"),
+    getColor("gradientColSecond")
+  );
+  transition: $transition;
   z-index: 1;
 }
 
 .team__caption {
   position: relative;
+  background-color: getColor("BackgroundMain");
   z-index: 2;
 }
 
@@ -86,6 +95,7 @@
   opacity: 0;
   gap: 0;
   transition: opacity 0.3s ease;
+  z-index: 3;
 }
 
 .team__photo:hover .team__social {
@@ -100,12 +110,6 @@
 .team__icon {
   color: white;
   font-size: 20px;
-}
-
-.team__img:hover,
-:active {
-  box-shadow: 7px 7px 0px 4px getColor("AccentColor");
-  transition: $transition;
 }
 
 .team__icon {
@@ -143,6 +147,22 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+.team__overlay:hover {
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(
+    to top,
+    getColor("gradientColFirst"),
+    getColor("gradientColSecond")
+  );
+}
+
+.team__photo:hover,
+:active {
+  box-shadow: 7px 7px 0px 4px getColor("AccentColor");
+  transition: $transition;
 }
 
 @media screen and (min-width: 768px) {

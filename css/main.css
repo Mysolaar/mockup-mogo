@@ -378,9 +378,11 @@ button {
 }
 .team__container {
   display: grid;
+  margin-bottom: 30px;
 }
 .team__list {
   padding: 0;
+  margin-bottom: 30px;
 }
 .team__list {
   padding-top: 60px;
@@ -400,7 +402,7 @@ button {
 }
 .team__name {
   margin: 0;
-  margin-top: 25px;
+  padding-top: 25px;
   font-weight: 500;
 }
 .team__description {
@@ -411,6 +413,7 @@ button {
   margin: 0;
   margin-top: 15px;
   font-style: italic;
+  padding-bottom: 20px;
 }
 .team__img {
   width: 250px;
@@ -429,19 +432,21 @@ button {
   height: auto;
 }
 
-.team__img:hover::after {
+.team__photo:hover::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to top, rgba(252, 227, 138, 0.7490196078), rgba(244, 139, 130, 0.7490196078));
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
 }
 
 .team__caption {
   position: relative;
+  background-color: #fff;
   z-index: 2;
 }
 
@@ -459,6 +464,7 @@ button {
   opacity: 0;
   gap: 0;
   transition: opacity 0.3s ease;
+  z-index: 3;
 }
 
 .team__photo:hover .team__social {
@@ -473,12 +479,6 @@ button {
 .team__icon {
   color: white;
   font-size: 20px;
-}
-
-.team__img:hover,
-:active {
-  box-shadow: 7px 7px 0px 4px #95e1d3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team__icon {
@@ -516,6 +516,18 @@ button {
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+.team__overlay:hover {
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(to top, rgba(252, 227, 138, 0.7490196078), rgba(244, 139, 130, 0.7490196078));
+}
+
+.team__photo:hover,
+:active {
+  box-shadow: 7px 7px 0px 4px #95e1d3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
