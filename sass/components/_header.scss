@@ -35,8 +35,7 @@
     cursor: pointer;
     transition: $transition;
     &:hover,
-    :focus,
-    :active {
+    :focus {
       transition: $transition;
       color: getColor("HoverColor");
     }
